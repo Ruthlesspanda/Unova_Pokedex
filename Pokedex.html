@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Firstly I'd like to reference the video on a similiar project by James Q Quick 
+        whose JS code was the basis for the functions in Pokedex.js along with the animation
+        effects implemented in Pokedex.CSS below is the link to the video I used to learn
+        what was needed for this project
+        
+        https://youtu.be/T-VQUKeSU1w Build a Pokedex with Vanilla HTML, CSS, and JavaScript
+
+        Secondly I'd like to reference Pokeapi.co which is where all the data on the individual
+        Pokemon comes from. Without their extensive database from which to draw on for information
+        this project probably would've taken far longer. 
+
+        https://pokeapi.co/ Their website
+    -->
+
+    <!-- Functionality: This web application is meant to simulate the pokedex of the generation
+    5 Unova Dex from Pokemon Black and Pokemon White. Each Pokemon has its own entry in the dex
+    which contain a sprite of the pokemon, The pokemon's National dex id number, the Pokemon's
+    name and the Pokemon's abilities. Clicking on the Pokemon's image will open the bulbapedia
+    page of that Pokemon in a new tab.
+    -->
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unova Region Pokedex</title>
+        <link rel="stylesheet" type="text/css" href="Pokedex.CSS">
+       
+        <!-- The 2 lines below essentially allow us to properly utilize Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--This script exists to link jquery-->
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+    </head>
+
+    <body>  
+
+        <!-- This script exists to link the bootstrap JS file-->
+        <script type="text/javascript" src="bootstrap.min.js"></script>
+
+        <div id="NavigationMenu">
+
+            <p class="headerText">Vikramjeet Gill</p>
+            <p id="title"> The Unova Region Pokedex </p>
+
+        </div>
+
+        <ol id="pokedex"> </ol> <!-- This is where we actually put the individual pokedex entries as list items which will be done in the JS -->
+        
+        <div id="footer"></div> <!-- This div is here for aesthetic reasons, essentially just to put the black bar on the bottom of the page -->
+
+        <script src="Pokedex.js"></script> <!-- This script links the Pokedex.js file-->
+        <!-- Note that this script must be places at the end of the body or else you risk causing issues where the js file thinks certain HTML elements don't exist-->
+    </body>
+
+</html>

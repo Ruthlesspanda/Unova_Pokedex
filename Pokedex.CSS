@@ -1,0 +1,94 @@
+#NavigationMenu {
+    background-color: #111;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+#footer {
+    background-color: #111;
+    padding-top: 5px;
+    overflow: hidden;
+    text-align: center;
+    height: 70px;
+}
+
+.headerText {
+    color: white;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.entry {
+    list-style: none;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+    padding: 30px;
+    background-color: #E8E8F0;
+    text-align: center;
+}
+
+/*
+    entry:hover dictates the bounce animation you see
+    if you hover your mouse over a given pokedex entry
+*/
+
+.entry:hover {
+    animation: bounce 0.5s linear;
+}
+
+/*
+    The purpose of @keyframes is to help define the step by step
+    actions of the element entry during the animation. ex: at 20% 
+    of the time through the animation the element undergoes a transformation
+    of -6px in the yu direction and at 40% its 0px etc...
+*/
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-2px);
+    }
+    80% {
+        transform: translateY(0px);
+    }
+}
+
+.entryType {
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.entryAbility {
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.entryTitle {
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+/*
+    The display being grid means all the elements of the list
+    will be displayed in a grid format. The grid-template-columns
+    portion makes it so that the minimum size that a entry can be
+    is 320px
+*/
+
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
